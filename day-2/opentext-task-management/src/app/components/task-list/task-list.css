@@ -1,0 +1,42 @@
+.task-list {
+  max-width: 480px;
+  margin: 40px auto;
+  font-family: system-ui, sans-serif;
+}
+
+.task-list input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.task-list .count {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.task-list .empty-state {
+  color: #999;
+  font-style: italic;
+}
+
+.task-list .badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.task-list .badge.grey {
+  background: #8a8a8a;
+}
+
+.task-list .badge.blue {
+  background: #2e74b5;
+}
+
+.task-list .badge.green {
+  background: #2e7d32;
+}

@@ -1,0 +1,22 @@
+<div class="task-list">
+  <h2>OpenText TaskFlow - My Tasks</h2>
+
+  <input type="text" placeholder="Filter Tasks" [(ngModel)]="filterText" />
+  <p class="count">{{ filteredTasks().length }}</p>
+
+  @if (filteredTasks().length > 0) {
+    @for (t of filteredTasks(); track t.id) {
+    <app-task-card [task]="t" (markDone)="onMarkDone($event)">
+        @switch (t.status) {
+
+            @case('todo'){<span class="badge grey">To do</span>}
+            @case('in-progress'){<span class="badge blue">In Progress</span>}
+            @case('done'){<span class="badge green">Done</span>}
+          
+        }
+    </app-task-card>
+    }
+  } @else {
+    <p class="empty-state">No records found!!!</p>
+  }
+</div>

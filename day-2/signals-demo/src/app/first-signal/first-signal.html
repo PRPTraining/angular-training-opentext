@@ -1,0 +1,12 @@
+<h1>Shopping Cart</h1>
+<hr/>
+
+<div>
+    <!-- <p>Quantity: {{ quantity() }}</p> -->
+
+    <select [ngModel]="quantity()" (ngModelChange)="onQuantityChange($event)">
+        <option *ngFor="let i of quantityAvailable()" [value]="i">{{ i }}
+
+        </option>
+    </select>
+</div>
