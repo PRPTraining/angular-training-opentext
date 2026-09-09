@@ -1,0 +1,11 @@
+
+<article class="task-card" [class.completed]="task().status==='done'" >
+<h3>{{task().title}}</h3>
+<p>Priority : {{task().priority}}</p>
+<p>Status : {{task().status}}</p>
+<app-task-age-timer [createdAt]="task().createdAt"></app-task-age-timer>
+<ng-content>
+    
+</ng-content>
+<button [disabled]="task().status==='done'" (click)="markDone.emit(task().id)">Mark Done</button>
+</article>
