@@ -1,0 +1,28 @@
+form {
+  width: 300px;
+  margin: 50px auto;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+}

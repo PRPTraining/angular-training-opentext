@@ -1,0 +1,16 @@
+
+<nav class="top-nav">
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/tasks">Tasks</a>
+
+
+    @if(auth.isLoggedIn()){
+        <button (click)="logout()">Log out</button>
+    }@else{
+        <a routerLink="/login">Login</a>
+    }
+
+
+</nav>
+
+<router-outlet></router-outlet>

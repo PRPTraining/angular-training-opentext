@@ -1,0 +1,21 @@
+
+<div class="login">
+    <h2>Sign in to OpenText TaskFlow</h2>
+
+     <input
+        placeholder="Username"      
+        [ngModel]="username()"
+        (ngModelChange)="username.set($event)"
+      />
+
+      <!-- Password input with same two-way binding pattern -->
+      <input
+        placeholder="Password"
+        type="password"
+        [ngModel]="password()"
+        (ngModelChange)="password.set($event)"
+      />
+
+      <!-- Login button: (click) calls onLogin() method -->
+      <button type="button" (click)="onLogin()">Sign in</button>
+</div>
